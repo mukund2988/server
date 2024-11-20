@@ -1,0 +1,28 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/server.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "publicc/**/*",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "api/server.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/publicc/$1"
+      }
+    ],
+    "env": {
+      "MONGO_URI": "@mongo_uri", 
+      "PORT": "3000"
+    }
+  }
+  
