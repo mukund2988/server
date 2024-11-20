@@ -14,8 +14,8 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/server.js"
+      "src": "/api/(.*)", // Routes all requests starting with /api
+      "dest": "/api/server.js" // Maps to the server.js file
     }
   ],
   "keywords": [],
