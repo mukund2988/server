@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+  </head>
+  <body>
+    <h2>Registration Form</h2>
+    <form action="/register" method="POST">
+      <!-- First Name -->
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required /><br /><br />
+      <!-- Middle Name (Optional) -->
+      <label for="middleName">Middle Name (Optional):</label>
+      <input type="text" id="middleName" name="middleName" /><br /><br />
+
+      <!-- Last Name -->
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required /><br /><br />
+
+      <!-- Mobile No. -->
+      <label for="mobile">Mobile No.:</label>
+      <input
+        type="tel"
+        id="mobile"
+        name="mobile"
+        pattern="[0-9]{10}"
+        required
+      /><br /><br />
+
+      <!-- Gmail (Optional) -->
+      <label for="gmail">Gmail</label>
+      <input type="email" id="gmail" name="gmail" /><br /><br />
+
+      <!-- Address -->
+      <label for="address">Address:</label>
+      <textarea
+        id="address"
+        name="address"
+        rows="4"
+        cols="50"
+        required
+      ></textarea
+      ><br /><br />
+
+      <!-- Work Area -->
+      <label for="workArea">For which work are you joining Instint:</label>
+      <input type="text" id="workArea" name="workArea" required /><br /><br />
+
+      <!-- Area Checkboxes -->
+      <label>Area:</label><br />
+      <input type="checkbox" id="noida" name="area" value="Noida" />
+      <label for="noida">Noida</label><br />
+      <input
+        type="checkbox"
+        id="greaterNoida"
+        name="area"
+        value="Greater Noida"
+      />
+      <label for="greaterNoida">Greater Noida</label><br />
+      <input type="checkbox" id="ghaziabad" name="area" value="Ghaziabad" />
+      <label for="ghaziabad">Ghaziabad</label><br />
+      <input type="checkbox" id="delhi" name="area" value="Delhi" />
+      <label for="delhi">Delhi</label><br />
+      <input type="checkbox" id="gurugram" name="area" value="Gurugram" />
+      <label for="gurugram">Gurugram</label><br />
+      <input type="checkbox" id="prayagraj" name="area" value="Prayagraj" />
+      <label for="prayagraj">Prayagraj</label><br /><br />
+
+      <!-- Shop Name (Optional) -->
+      <label for="shopName">Shop Name</label>
+      <input type="text" id="shopName" name="shopName" /><br /><br />
+
+      <!-- Submit Button -->
+      <button type="submit">Register</button>
+    </form>
+
+    <!-- <script>
+    // API endpoint of your backend
+    const apiUrl = 'server-sigma-lovat-64.vercel.app/users'; // Replace with your actual backend URL
+
+    // Fetch users from the backend
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(users => {
+        const usersList = document.getElementById('users');
+        users.forEach(user => {
+          const userDiv = document.createElement('div');
+          userDiv.textContent = `${user.firstName} ${user.lastName}`;
+          usersList.appendChild(userDiv);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching users:', error);
+      });
+  </script> -->
+  </body>
+</html>
