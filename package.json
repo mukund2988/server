@@ -2,13 +2,13 @@
   "name": "instint_main",
   "version": "1.0.0",
   "description": "",
-  "main": "api/index.js",
+  "main": "api/server.js",
   "scripts": {
-    "start": "node api/index.js"
+    "start": "node api/server.js"
   },
   "builds": [
     {
-      "src": "api/index.js",
+      "src": "api/server.js",
       "use": "@vercel/node"
     }
   ],
