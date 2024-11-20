@@ -61,7 +61,7 @@ app.get('/users', async (req, res) => {
 });
 
 // Serve static files
-app.use(express.static('publicc'));
+app.use(express.static('publicc','index.html'));
 
 // Start the server
 const PORT = process.env.PORT || 3000;
